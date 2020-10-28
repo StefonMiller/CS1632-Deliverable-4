@@ -88,7 +88,7 @@ public class GameOfLifePinningTest {
 	/* TODO: Write the three pinning unit tests for the three optimized methods */
 	@Test
 	public void calculateNextIterationTest() {
-		// Precondition: above
+		// Preconditions: Main panel containing the "blinker" pattern
 		
 		// Run test to calc next iteration
 		mp.calculateNextIteration();
@@ -109,7 +109,7 @@ public class GameOfLifePinningTest {
 	
 	@Test
 	public void iterateCellTestAliveToAlive() {
-		// Precondition: above
+		// Preconditions: Main panel containing the "blinker" pattern
 		
 		// Run test to iterate a single cell in the very center (2, 2)
 		// based on the given vertical bar pattern
@@ -121,7 +121,7 @@ public class GameOfLifePinningTest {
 	
 	@Test
 	public void iterateCellTestAliveToDead() {
-		// Precondition: above
+		// Preconditions: Main panel containing the "blinker" pattern
 		
 		// Run test to iterate a single cell at (1, 2)
 		// based on the given vertical bar pattern
@@ -133,8 +133,8 @@ public class GameOfLifePinningTest {
 	
 	@Test
 	public void iterateCellTestDeadToAlive() {
-		// Precondition: above
-		
+		// Preconditions: Main panel containing the "blinker" pattern
+				
 		// Run test to iterate a single cell at (2, 3)
 		// based on the given vertical bar pattern
 		boolean test = mp.iterateCell(2, 3);
@@ -145,8 +145,8 @@ public class GameOfLifePinningTest {
 	
 	@Test
 	public void iterateCellTestDeadToDead() {
-		// Precondition: above
-
+		// Preconditions: Main panel containing the "blinker" pattern
+		
 		// Run test to iterate a single cell at (0, 0)
 		// based on the given vertical bar pattern
 		boolean test = mp.iterateCell(0, 0);
@@ -169,8 +169,7 @@ public class GameOfLifePinningTest {
 	
 	@Test
 	public void toStringMainPanelTest() {
-		// Precondition: above
-		// and: stub cells toString() so they return the right thing
+		// Preconditions: Main panel containing the "blinker" pattern and stub cells toString() so they return the right thing
 		for(int i = 0; i < 5; i++) {
 			for(int j = 0; j < 5; j++) {
 				if(expected_vertical[i][j]) {
