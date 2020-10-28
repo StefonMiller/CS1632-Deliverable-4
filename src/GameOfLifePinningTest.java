@@ -139,7 +139,7 @@ public class GameOfLifePinningTest {
 		// based on the given vertical bar pattern
 		boolean test = mp.iterateCell(2, 3);
 		
-		// This cell has 2 neighbors, so it should resurrect
+		// This cell has 3 neighbors, so it should resurrect
 		assertTrue(test);
 	}
 	
