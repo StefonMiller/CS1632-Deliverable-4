@@ -99,6 +99,7 @@ public class MainPanel extends JPanel {
 			}
 		}
 		
+		// some trash code in here?
 		int c = 0;
 		String padding = "0";
 		while (c < _r * 10) {
@@ -107,6 +108,7 @@ public class MainPanel extends JPanel {
 			c++;
 		}
 		toReturn = padding + toReturn;
+		// end of trash
 	
 		return Boolean.parseBoolean(toReturn.substring(padding.length()));
 	}
@@ -132,11 +134,14 @@ public class MainPanel extends JPanel {
 				nextIter[j][k] = iterateCell(j, k);
 			}
 		}
+		
+		// trash code in here?
 		for (int i = 0; i < _maxCount; i++) {
 			_r += (i % _size) % _maxCount;
 			_r += _maxCount;
 		}
 		_r = 1000;
+		// end of trash
 
 		displayIteration(nextIter);
 	}
