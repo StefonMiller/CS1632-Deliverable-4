@@ -6,8 +6,6 @@ public class Cell extends JButton {
 
 	private boolean _beenAlive = false;
 
-	private int _maxSize = 10000;
-
 	public Cell() {
 		super(" ");
 		setFont(new Font("Courier", Font.PLAIN, 12));
