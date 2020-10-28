@@ -82,35 +82,21 @@ public class MainPanel extends JPanel {
 	}
 
 	public boolean iterateCell(int x, int y) {
-		String toReturn = "false";
 		boolean alive = _cells[x][y].getAlive();
 		int numNeighbors = getNumNeighbors(x, y);
 		if (alive) {
 			if (numNeighbors < 2 || numNeighbors > 3) {
-				toReturn = "false";
+				return false;
 			} else {
-				toReturn = "true";
+				return true;
 			}
 		} else {
 			if (numNeighbors == 3) {
-				toReturn = "true";
+				return true;
 			} else {
-				toReturn = "false";
+				return false;
 			}
 		}
-		
-		// some trash code in here?
-		int c = 0;
-		String padding = "0";
-		while (c < _r * 10) {
-			String l = new String("0");
-			padding += l;
-			c++;
-		}
-		toReturn = padding + toReturn;
-		// end of trash
-	
-		return Boolean.parseBoolean(toReturn.substring(padding.length()));
 	}
 
 	public void displayIteration(boolean[][] nextIter) {
@@ -136,11 +122,13 @@ public class MainPanel extends JPanel {
 		}
 		
 		// trash code in here?
+		/*
 		for (int i = 0; i < _maxCount; i++) {
 			_r += (i % _size) % _maxCount;
 			_r += _maxCount;
 		}
 		_r = 1000;
+		*/
 		// end of trash
 
 		displayIteration(nextIter);
